@@ -4,7 +4,7 @@ import logoMastercraft from '../../../assets/logo-mastercraft.svg'
 const Title = () => {
   return (
     <section className="title-section">
-      <img src={logoMastercraft} alt="" />
+      <img className='logo-mastercraft' src={logoMastercraft} alt="" />
       <h1>Mastercraft Bamboo Monitor Riser</h1>
       <p>A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
       <div className='title-button-div'>

@@ -1,0 +1,15 @@
+@import '../utils/mixins.scss', '../utils/variables.scss';
+
+.resume-section {
+    gap: 1.5rem;
+
+    .resume-article {
+        @include flex-column;
+        gap: 0.7rem;
+    }
+    .border {
+        height: 1px;
+        width: 90px;
+        border-bottom: 1px solid $medium-gray;
+    }
+}

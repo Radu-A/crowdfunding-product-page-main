@@ -1,7 +1,8 @@
 @import '../utils/mixins.scss', '../utils/variables.scss';
 
 main {
-    background-color: $broken-white;
+    top: -65px;
+    position: relative;
     @include flex-column;
     gap: 1.5rem;
 
@@ -17,6 +18,7 @@ main {
 
     p {
         color: $dark-gray;
+        line-height: 1.7rem;
     }
 
     button:not(.bookmark-button) {

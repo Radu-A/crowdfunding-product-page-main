@@ -1,9 +1,16 @@
 @import '../utils/mixins.scss', '../utils/variables.scss';
 
 .title-section {
+    position: relative;
+
     .title-button-div {
         @include flex-row;
         gap: 0.7rem;
+    }
+
+    .logo-mastercraft {
+        top: -30px;
+        position: absolute;
     }
 
     .bookmark-button{
