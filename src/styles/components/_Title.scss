@@ -1,0 +1,15 @@
+@import '../utils/mixins.scss', '../utils/variables.scss';
+
+.title-section {
+    .title-button-div {
+        @include flex-row;
+        gap: 0.7rem;
+    }
+
+    .bookmark-button{
+        height: 3.5rem;
+        width: 3.5rem;
+        border: none;
+        border-radius: 30px;
+    }
+}

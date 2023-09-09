@@ -1,0 +1,16 @@
+@import '../utils/mixins.scss', '../utils/variables.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: $comissioner;
+    font-size: 15px;
+}
+#root {
+    margin: 0;
+    padding: 0;
+}
