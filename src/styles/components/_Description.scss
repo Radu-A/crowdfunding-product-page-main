@@ -4,7 +4,12 @@
 
     h2, h3 ,p {
         text-align: left;
-        margin-bottom: 2rem;
+    }
+
+    .description-article {
+        @include flex-column;
+        align-items: start;
+        gap: 1.5rem;
     }
 
     .option-article {
@@ -13,5 +18,20 @@
         border-radius: 10px;
         @include flex-column;
         align-items: start;
+        gap: 1.5rem;
+
+        .option-heading-2 {
+            color: $moderate-cyan;
+        }
     }
+
+    .option-article-3 {
+        opacity: 0.5;
+
+        button {
+            background-color: $medium-gray;
+        }
+    }
+
+
 }

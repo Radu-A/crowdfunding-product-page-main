@@ -2,7 +2,7 @@ import React from "react";
 
 const Option3 = () => {
   return (
-    <article className="option-article">
+    <article className="option-article option-article-3">
       <div className="option-heading-div">
         <h3 className="option-heading-1">Mahogany Special Edition</h3>
         <h3 className="option-heading-2">Pledge $200 or more</h3>
