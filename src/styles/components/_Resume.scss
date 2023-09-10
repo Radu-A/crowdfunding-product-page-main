@@ -7,9 +7,52 @@
         @include flex-column;
         gap: 0.7rem;
     }
+
+    .resume-progress-article {
+        @include flex-row;
+        justify-content: start;
+        width: 100%;
+        height: 1rem;
+        background-color: $light-gray;
+        border-radius: 5rem;
+
+        .progress-div {
+            height: 1rem;
+            width: 80%;
+            background-color: $moderate-cyan;
+            border-radius: 5rem;
+        }
+    }
+
     .border {
         height: 1px;
         width: 90px;
-        border-bottom: 1px solid $medium-gray;
+        background-color: $medium-gray;
+    }
+}
+
+@media (min-width: 700px) {
+
+    .resume-section {
+        @include flex-row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        position: relative;
+
+        .resume-article:not(.resume-progress-article) {
+            padding: 1rem 2rem;
+            flex: 1;
+            @include flex-column;
+            align-items: start;
+        }
+
+        .border {
+            height: 60px;
+            width: 1px;
+        }
+
+        .resume-progress-article {
+            width: 95%;
+        }
     }
 }

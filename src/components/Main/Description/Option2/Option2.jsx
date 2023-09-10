@@ -3,7 +3,7 @@ import React from "react";
 const Option2 = () => {
   return (
     <article className="option-article">
-      <div className="option-span-div">
+      <div className="option-heading-div">
         <h3 className="option-heading-1">Black Edition Stand</h3>
         <h3 className="option-heading-2">Pledge $75 or more</h3>
       </div>

@@ -7,7 +7,7 @@ const Resume = () => {
         <span className="span-big resume-span">$89,914</span>
         <span className="span-small"> of $100,000 backed</span>
       </article>
-      <div className="border"></div>
+      <div className="border" id="border"></div>
       <article className="resume-article resume-article-2">
         <span className="span-big resume-span">5,007</span>
         <span className="span-small">total backers</span>
@@ -16,6 +16,9 @@ const Resume = () => {
       <article className="resume-article resume-article-3">
         <span className="span-big resume-span">56</span>
         <span className="span-small">days left</span>
+      </article>
+      <article className="resume-article resume-progress-article">
+        <div className="progress-div" id="border"></div>
       </article>
     </section>
   );

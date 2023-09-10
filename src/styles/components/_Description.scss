@@ -32,6 +32,20 @@
             background-color: $medium-gray;
         }
     }
+}
 
+@media (min-width: 700px) {
 
+    .description-section {
+
+        .option-article {
+            padding: 2.5rem;
+
+            .option-heading-div {
+                width: 100%;
+                @include flex-row;
+                justify-content: space-between;
+            }
+        }
+    }
 }

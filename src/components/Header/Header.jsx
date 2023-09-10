@@ -1,6 +1,8 @@
 import { useMediaQuery } from "react-responsive";
 import imageHeroMobile from "../../assets/image-hero-mobile.jpg";
 import imageHeroDesktop from "../../assets/image-hero-desktop.jpg";
+import NavbarDesktop from "./NavbarDesktop/NavbarDesktop";
+import NavbarMobile from "./NavbarMobile/NavbarMobile";
 
 const Header = () => {
   const isDesktop = useMediaQuery({
@@ -15,14 +17,18 @@ const Header = () => {
           style={{
             backgroundImage: `url(${imageHeroDesktop})`,
           }}
-        ></header>
+        >
+          <NavbarDesktop />
+        </header>
       ) : (
         <header
           className="smartphone-header"
           style={{
             backgroundImage: `url(${imageHeroMobile})`,
           }}
-        ></header>
+        >
+          <NavbarMobile />
+        </header>
       )}
     </>
   );
