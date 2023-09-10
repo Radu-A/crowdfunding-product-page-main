@@ -1,13 +1,13 @@
 @import '../utils/mixins.scss', '../utils/variables.scss';
 
 main {
-    width: 100%;
     top: -65px;
     position: relative;
     @include flex-column;
     gap: 1.5rem;
 
     section {
+        max-width: 800px;
         padding: 2.5rem 1.5rem;
         width: 85%;
         background-color: white;
