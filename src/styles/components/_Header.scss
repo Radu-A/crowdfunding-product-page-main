@@ -4,7 +4,13 @@ header {
     height: 300px;
     background-size:cover;
 
+    .navbar-mobile-fixed {
+        position: fixed;
+        z-index: 2;
+    }
+
     .navbar-mobile {
+        width: 100%;
         padding: 2rem 1.5rem;
         @include flex-row;
         justify-content: space-between;
@@ -14,17 +20,18 @@ header {
         }
 
         .menu-layer {
+            display: none;
             top: 0;
             right: 0;
             position: fixed;
             height: 100vh;
             width: 100vw;
-            background-color: black;
-            opacity: 0.2;
+            background: linear-gradient(180deg, rgba(0,0,0,0.7597254004576659) 0%, rgba(0,0,0,0.009) 50%);
             z-index: 2;
         }
     
         .menu-mobile {
+            display: none;
             width: 90%;
             top: 5rem;
             position: fixed;
@@ -33,20 +40,24 @@ header {
             border-radius: 10px;
             list-style: none;
             z-index: 3;
-        }
     
-        .menu-item {
-            height: 5rem;
-            @include flex-row;
-            justify-content: start;
+            .menu-item {
+                height: 5rem;
+                @include flex-row;
+                justify-content: start;
+        
+                a {
+                    margin: auto 2rem;
+                }
+            }
     
-            a {
-                margin: auto 2rem;
+            .menu-item:first-child, .menu-item:nth-child(2) {
+                border-bottom: 1px solid $medium-gray;
             }
         }
-    
-        .menu-item:first-child, .menu-item:nth-child(2) {
-            border-bottom: 1px solid $medium-gray;
+
+        .active {
+            display: unset;
         }
     }
 
