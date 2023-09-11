@@ -9,15 +9,17 @@ const NavbarMobile = () => {
   const [mobileMenuClass, setMobileMenuClass] = useState("menu-mobile");
   const [layerClass, setLayerClass] = useState("menu-layer");
 
-  const openMobileMenu = () => {
-    setLayerClass("menu-layer active")
+  const openMobileMenu = (event) => {
+    event.preventDefault();
+    setLayerClass("menu-layer active");
     setNavbarClass("navbar-mobile navbar-mobile-fixed");
     setNavbarIcon(iconClose);
     setMobileMenuClass("menu-mobile active");
   };
 
-  const closeMobileMenu = () => {
-    setLayerClass("menu-layer")
+  const closeMobileMenu = (event) => {
+    event.preventDefault();
+    setLayerClass("menu-layer");
     setNavbarClass("navbar-mobile");
     setNavbarIcon(iconHamburger);
     setMobileMenuClass("menu-mobile");
@@ -25,15 +27,17 @@ const NavbarMobile = () => {
 
   return (
     <nav className={navbarClass}>
-      <img src={logo} alt="crowdfund logo" />
+      <a href="">
+        <img src={logo} alt="crowdfund logo" />
+      </a>
       {navbarIcon === iconHamburger ? (
-        <img
-          src={iconHamburger}
-          alt="icon-hamburger"
-          onClick={openMobileMenu}
-        />
+        <a className="icon-hamburger" href="" onClick={openMobileMenu}>
+          <img src={iconHamburger} alt="icon hamburger" />
+        </a>
       ) : (
-        <img src={iconClose} alt="icon-hamburger" onClick={closeMobileMenu} />
+        <a href="" onClick={closeMobileMenu}>
+          <img src={iconClose} alt="icon close" />
+        </a>
       )}
       <ul className={mobileMenuClass}>
         <li className="menu-item">
