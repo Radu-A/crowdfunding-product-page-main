@@ -18,15 +18,6 @@ main {
         gap: 1.5rem;
     }
 
-    h3 {
-        font-size: 1rem;
-    }
-
-    p {
-        color: $dark-gray;
-        line-height: 1.7rem;
-    }
-
     button:not(.bookmark-button) {
         height: 3.5rem;
         width: 12rem;

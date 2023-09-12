@@ -22,6 +22,27 @@
         position: absolute;
         top: 2.8rem;
         right: 2rem;
+    }    
+    
+    .option-article {
+        padding: 1.5rem;
+        border: 1px solid $medium-gray;
+        border-radius: 10px;
+        @include flex-column;
+        align-items: start;
+        gap: 1.5rem;
+
+        .option-heading-2 {
+            color: $moderate-cyan;
+        }
+    }
+
+    .option-article-3 {
+        opacity: 0.5;
+
+        button {
+            background-color: $medium-gray;
+        }
     }
 }
 

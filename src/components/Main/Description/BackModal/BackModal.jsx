@@ -10,7 +10,7 @@ const BackModal = () => {
       <modal className="back-modal">
         <h2>Back this project</h2>
         <a className="close-modal-link" href="">
-          <img src={iconCloseModal} alt="" />
+          <img src="" alt="" />
         </a>
         <p>
           Want to support us in bringing Mastercraft Bamboo Monitor Riser out in
