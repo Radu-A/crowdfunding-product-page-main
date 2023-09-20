@@ -4,8 +4,14 @@ const Option1 = () => {
   return (
     <article className="option-article">
       <div className="option-heading-div">
-        <h3 className="option-heading-1">Bamboo Stand</h3>
-        <h3 className="option-heading-2">Pledge $25 or more</h3>
+        <a className="select-button">
+          <div className="checked-div"> 
+          </div>
+        </a>
+        <div className="option-heading-subdiv">
+          <h3 className="option-heading-1">Bamboo Stand</h3>
+          <h3 className="option-heading-2">Pledge $25 or more</h3>
+        </div>
       </div>
       <p className="option-paragraph">
         You get an ergonomic stand made of natural bamboo. You've helped us

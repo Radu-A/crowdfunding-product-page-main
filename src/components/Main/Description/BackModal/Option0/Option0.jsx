@@ -1,9 +1,14 @@
 import React from "react";
 
 const Option0 = () => {
+
   return (
     <article className="option-article">
       <div className="option-heading-div">
+        <a className="select-button">
+          <div className="checked-div"> 
+          </div>
+        </a>
         <h3 className="option-heading-1">Pledge with no reward</h3>
       </div>
       <p className="option-paragraph">

@@ -4,8 +4,14 @@ const Option3 = () => {
   return (
     <article className="option-article option-article-3">
       <div className="option-heading-div">
-        <h3 className="option-heading-1">Mahogany Special Edition</h3>
-        <h3 className="option-heading-2">Pledge $200 or more</h3>
+        <a className="select-button">
+          <div className="checked-div"> 
+          </div>
+        </a>
+        <div className="option-heading-subdiv">
+          <h3 className="option-heading-1">Mahogany Special Edition</h3>
+          <h3 className="option-heading-2">Pledge $200 or more</h3>
+        </div>
       </div>
       <p className="option-paragraph">
         You get two Special Edition Mahogany stands, a Backer T-Shirt, and a
