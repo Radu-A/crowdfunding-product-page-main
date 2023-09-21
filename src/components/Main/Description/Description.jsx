@@ -1,10 +1,13 @@
-import React from "react";
 import Option1 from "./Option1/Option1";
 import Option2 from "./Option2/Option2";
 import Option3 from "./Option3/Option3";
 import BackModal from "./BackModal/BackModal";
+import { useContext } from "react";
+import { ShowBackModalContext } from "../../../context/showBackModalContext";
 
 const Description = () => {
+  const { layerModalClass } = useContext(ShowBackModalContext);
+
   return (
     <section className="description-section">
       <article className="description-article">
@@ -26,6 +29,7 @@ const Description = () => {
       <Option2 />
       <Option3 />
       <BackModal />
+      <div className={layerModalClass}></div>
     </section>
   );
 };

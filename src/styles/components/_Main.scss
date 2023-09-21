@@ -18,6 +18,10 @@ main {
         gap: 1.5rem;
     }
 
+    button:hover {
+        cursor: pointer;
+    }
+
     button:not(.bookmark-button) {
         height: 3.5rem;
         width: 12rem;

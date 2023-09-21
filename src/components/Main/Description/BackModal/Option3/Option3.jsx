@@ -4,10 +4,17 @@ const Option3 = () => {
   return (
     <article className="option-article option-article-3">
       <div className="option-heading-div">
-        <a className="select-button">
+        {/* <a className="select-button">
           <div className="checked-div"> 
           </div>
-        </a>
+        </a> */}
+        <input
+          className="option-radio"
+          type="radio"
+          name="option"
+          id="option-radio-3"
+          disabled="true"
+        />
         <div className="option-heading-subdiv">
           <h3 className="option-heading-1">Mahogany Special Edition</h3>
           <h3 className="option-heading-2">Pledge $200 or more</h3>

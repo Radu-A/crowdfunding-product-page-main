@@ -4,10 +4,16 @@ const Option1 = () => {
   return (
     <article className="option-article">
       <div className="option-heading-div">
-        <a className="select-button">
+        {/* <a className="select-button">
           <div className="checked-div"> 
           </div>
-        </a>
+        </a> */}
+        <input
+          className="option-radio"
+          type="radio"
+          name="option"
+          id="option-radio-1"
+        />
         <div className="option-heading-subdiv">
           <h3 className="option-heading-1">Bamboo Stand</h3>
           <h3 className="option-heading-2">Pledge $25 or more</h3>
