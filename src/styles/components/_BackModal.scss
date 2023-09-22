@@ -30,6 +30,10 @@
         gap: 1rem;
     }
 
+    input[type='radio']+label {
+        cursor: pointer;
+    }
+
     input[type='radio'] {
         appearance: none;
         width: 1.3rem;
@@ -37,6 +41,7 @@
         border-radius: 50%;
         outline: none;
         box-shadow: 0 0 0 1px $medium-gray;
+        cursor: pointer;
     }
 
     input[type='radio']:before {

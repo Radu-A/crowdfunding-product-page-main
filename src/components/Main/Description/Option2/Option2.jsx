@@ -1,6 +1,19 @@
-import React from "react";
+import { useContext } from "react";
+import { SelectOptionContext } from "../../../../context/selectOptionContext";
+import { ShowBackModalContext } from "../../../../context/showBackModalContext";
 
 const Option2 = () => {
+  const { showBackModal } = useContext(ShowBackModalContext);
+  const { handleChange, backModalRef } = useContext(SelectOptionContext);
+
+  const handleClick = (event) => {
+    showBackModal(event);
+    handleChange(event, "black");
+    backModalRef.current.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
   return (
     <article className="option-article">
       <div className="option-heading-div">
@@ -15,7 +28,7 @@ const Option2 = () => {
         <span className="span-big option-span-1">64</span>
         <span className="span-small option-span-2">left</span>
       </div>
-      <button>Select Reward</button>
+      <button onClick={handleClick}>Select Reward</button>
     </article>
   );
 };

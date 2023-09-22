@@ -1,14 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { SelectOptionContext } from "../../../../../context/selectOptionContext";
 
-const Option0 = ({
-  handleChange,
-  option,
-  optionArticle0Class,
-  optionPledgeDiv0Class,
-}) => {
-
+const Option0 = () => {
+  const { handleChange, option, optionArticleClass, optionPledgeClass } =
+    useContext(SelectOptionContext);
   return (
-    <article className={optionArticle0Class}>
+    <article className={optionArticleClass.optionArticle0}>
       <div className="option-heading-div">
         <input
           className="option-radio"
@@ -28,7 +25,7 @@ const Option0 = ({
         project. As a backer, you will be signed up to receive product updates
         via email.
       </p>
-      <div className={optionPledgeDiv0Class}>
+      <div className={optionPledgeClass.optionPledge0}>
         <p>Enter you pledge</p>
         <form action="" className="option-pledge-form">
           <div className="input-div">

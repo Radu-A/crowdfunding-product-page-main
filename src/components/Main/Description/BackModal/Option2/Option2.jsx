@@ -1,14 +1,16 @@
-import { useState } from "react";
+import { useContext } from "react";
+import { SelectOptionContext } from "../../../../../context/selectOptionContext";
 
-const Option2 = ({
-  handleChange,
-  option,
-  optionArticle2Class,
-  optionPledgeDiv2Class,
-}) => {
+const Option2 = () => {
+  const {
+    handleChange,
+    option,
+    optionArticleClass,
+    optionPledgeClass,
+  } = useContext(SelectOptionContext);
 
   return (
-    <article className={optionArticle2Class}>
+    <article className={optionArticleClass.optionArticle2}>
       <div className="option-heading-div">
         <input
           className="option-radio"
@@ -32,7 +34,7 @@ const Option2 = ({
         <span className="span-big option-span-1">64</span>
         <span className="span-small option-span-2">left</span>
       </div>
-      <div className={optionPledgeDiv2Class}>
+      <div className={optionPledgeClass.optionPledge2}>
         <p>Enter you pledge</p>
         <form action="" className="option-pledge-form">
           <div className="input-div">
