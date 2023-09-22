@@ -1,33 +1,22 @@
 import { useState } from "react";
 
-const Option1 = () => {
-  const [optionPledgeClass, setOptionPledgeClass] =
-    useState("option-pledge-div");
-  const [optionArticleClass, setOptionArticleClass] =
-    useState("option-article");
-
-  const handleFocus = () => {
-    setOptionPledgeClass("option-pledge-div option-pledge-div-active");
-    setOptionArticleClass("option-article option-article-active");
-  };
-  const handleBlur = () => {
-    setOptionPledgeClass("option-pledge-div");
-    setOptionArticleClass("option-article");
-  };
+const Option1 = ({
+  handleChange,
+  option,
+  optionArticle1Class,
+  optionPledgeDiv1Class,
+}) => {
   return (
-    <article className={optionArticleClass}>
+    <article className={optionArticle1Class}>
       <div className="option-heading-div">
-        {/* <a className="select-button">
-          <div className="checked-div"> 
-          </div>
-        </a> */}
         <input
           className="option-radio"
           type="radio"
           name="option"
           id="option-radio-1"
-          onFocus={handleFocus}
-          onBlur={handleBlur}
+          value="bamboo"
+          checked={option === "bamboo"}
+          onChange={handleChange}
         />
         <label htmlFor="option-radio-1" className="option-heading-subdiv">
           <h3 className="option-heading-1">Bamboo Stand</h3>
@@ -43,7 +32,7 @@ const Option1 = () => {
         <span className="span-big option-span-1">101 </span>
         <span className="span-small option-span-2">left</span>
       </div>
-      <div className={optionPledgeClass}>
+      <div className={optionPledgeDiv1Class}>
         <p>Enter you pledge</p>
         <form action="" className="option-pledge-form">
           <div className="input-div">
