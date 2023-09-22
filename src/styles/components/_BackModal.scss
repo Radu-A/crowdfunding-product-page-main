@@ -1,6 +1,7 @@
 @import '../utils/mixins.scss', '../utils/variables.scss';
 
 .back-modal-section {
+    box-sizing: border-box;
     height: 0px;
     padding: 0;
     border: 0;
@@ -22,7 +23,7 @@
     }
 
     .option-article-active {
-        border: 2px solid $moderate-cyan;
+        border: 3px solid $moderate-cyan;
     }
     
     .option-heading-div {
@@ -123,4 +124,62 @@
     height: unset;
     padding: 2.5rem 1.5rem;
     border: unset;
+}
+
+@media (min-width: 700px) {
+    .back-modal-section {
+        align-items: start;
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        .option-article {
+            @include flex-row;
+            flex-wrap: wrap;
+            padding-bottom: 1.8rem;
+
+            .option-label {
+                @include flex-row;
+                gap: 1rem;
+
+                .option-heading-2 {
+                    margin-top: 0;
+                }
+            }
+
+            .option-heading-div {
+                flex: 1;
+                order:0;
+                justify-content: start;
+            }
+
+            .option-paragraph {
+                padding-left: 2rem;
+                order: 2;
+            }
+
+            .option-span-div {
+                order: 1;
+            }
+
+            .option-pledge-div {
+                order: 4;
+
+                .option-pledge-form {
+                    width: 40%;
+                    gap: 1rem;
+                }
+            }
+
+            .option-pledge-div-active {
+                @include flex-row;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    .active {
+        padding: 3rem;
+    }
 }

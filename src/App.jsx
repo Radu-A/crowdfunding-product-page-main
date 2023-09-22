@@ -6,10 +6,10 @@ import Main from "./components/Main/Main";
 
 function App() {
   // Content of ShowBackModalContext
-  // The change of this class make visible back-modal-section
+  // use a state to save the className of back-modal-section and layer-modal
   const [backModalClass, setBackModalClass] = useState("back-modal-section");
   const [layerModalClass, setLayerModalClass] = useState("layer-modal");
-
+  // toggle classes
   const showBackModal = (event) => {
     event.preventDefault();
     if (backModalClass === "back-modal-section") {
@@ -20,7 +20,7 @@ function App() {
       setLayerModalClass("layer-modal");
     }
   };
-
+  // object with states and function to toggle classes
   const backModalSet = {
     showBackModal,
     backModalClass,

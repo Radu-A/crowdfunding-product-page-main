@@ -1,11 +1,11 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { ShowBackModalContext } from "../../../../context/showBackModalContext";
+import { SelectOptionContext } from "../../../../context/selectOptionContext";
 import Option0 from "./Option0/Option0";
 import Option1 from "./Option1/Option1";
 import Option2 from "./Option2/Option2";
 import Option3 from "./Option3/Option3";
 import iconCloseModal from "../../../../assets/icon-close-modal.svg";
-import { SelectOptionContext } from "../../../../context/selectOptionContext";
 
 const BackModal = () => {
   const { showBackModal, backModalClass } = useContext(ShowBackModalContext);

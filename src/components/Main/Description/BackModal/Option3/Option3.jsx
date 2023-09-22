@@ -15,10 +15,10 @@ const Option3 = () => {
           id="option-radio-3"
           disabled={true}
         />
-        <div className="option-heading-subdiv">
+        <label className="option-label">
           <h3 className="option-heading-1">Mahogany Special Edition</h3>
           <h3 className="option-heading-2">Pledge $200 or more</h3>
-        </div>
+        </label>
       </div>
       <p className="option-paragraph">
         You get two Special Edition Mahogany stands, a Backer T-Shirt, and a

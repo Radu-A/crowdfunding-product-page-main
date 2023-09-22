@@ -16,7 +16,7 @@ const Option0 = () => {
           checked={option === "no-reward"}
           onChange={handleChange}
         />
-        <label htmlFor="option-radio-0">
+        <label htmlFor="option-radio-0" className="option-label">
           <h3 className="option-heading-1">Pledge with no reward</h3>
         </label>
       </div>

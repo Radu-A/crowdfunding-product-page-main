@@ -21,7 +21,7 @@ const Option1 = () => {
           checked={option === "bamboo"}
           onChange={handleChange}
         />
-        <label htmlFor="option-radio-1" className="option-heading-subdiv">
+        <label htmlFor="option-radio-1" className="option-label">
           <h3 className="option-heading-1">Bamboo Stand</h3>
           <h3 className="option-heading-2">Pledge $25 or more</h3>
         </label>

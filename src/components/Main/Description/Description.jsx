@@ -6,7 +6,7 @@ import { useContext } from "react";
 import { ShowBackModalContext } from "../../../context/showBackModalContext";
 
 const Description = () => {
-  const { layerModalClass } = useContext(ShowBackModalContext);
+  const { showBackModal, layerModalClass } = useContext(ShowBackModalContext);
 
   return (
     <section className="description-section">
@@ -29,7 +29,7 @@ const Description = () => {
       <Option2 />
       <Option3 />
       <BackModal />
-      <div className={layerModalClass}></div>
+      <div className={layerModalClass} onClick={showBackModal}></div>
     </section>
   );
 };
