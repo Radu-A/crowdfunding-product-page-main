@@ -4,7 +4,7 @@ import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 
 function App() {
-  const [backModalClass, setBackModalClass] = useState("back-modal-section active");
+  const [backModalClass, setBackModalClass] = useState("back-modal-section");
   const [layerModalClass, setLayerModalClass] = useState("layer-modal");
 
   const showBackModal = (event) => {
@@ -22,7 +22,7 @@ function App() {
   const backModalSet = {
     showBackModal,
     backModalClass,
-    layerModalClass
+    layerModalClass,
   };
 
   return (

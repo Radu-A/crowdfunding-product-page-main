@@ -13,7 +13,7 @@ const Option3 = () => {
           type="radio"
           name="option"
           id="option-radio-3"
-          disabled="true"
+          disabled={true}
         />
         <div className="option-heading-subdiv">
           <h3 className="option-heading-1">Mahogany Special Edition</h3>
