@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { ShowBackModalContext } from "./context/showBackModalContext";
 import { SelectOptionContext } from "./context/selectOptionContext";
+import { ThanksModalContext } from "./context/thanksModalContext";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 
@@ -43,7 +44,7 @@ function App() {
   const backModalRef = useRef(null);
 
   const handleChange = (event, value) => {
-    let optionValue = '';
+    let optionValue = "";
     if (value) {
       setOption(value);
       optionValue = value;
@@ -107,15 +108,40 @@ function App() {
     option,
     optionArticleClass,
     optionPledgeClass,
-    backModalRef
+    backModalRef,
+  };
+
+  // CONTENT OF THANKSMODALCONTEXT
+  const [thanksModalClass, setThanksModalClass] = useState(
+    "thanks-modal-section"
+  );
+
+  const showThanksModal = (event) => {
+    event.preventDefault();
+    console.log("holi");
+    if (thanksModalClass === "thanks-modal-section") {
+      setThanksModalClass("thanks-modal-section thanks-modal-section-active");
+      setLayerModalClass("layer-modal layer-modal-active");
+    } else {
+      setThanksModalClass("thanks-modal-section");
+      setLayerModalClass("layer-modal");
+    }
+    console.log(thanksModalClass);
+  };
+
+  const thanksModalSet = {
+    showThanksModal,
+    thanksModalClass,
   };
 
   return (
     <>
       <ShowBackModalContext.Provider value={backModalSet}>
         <SelectOptionContext.Provider value={selectOptionSet}>
-          <Header />
-          <Main />
+          <ThanksModalContext.Provider value={thanksModalSet}>
+            <Header />
+            <Main />
+          </ThanksModalContext.Provider>
         </SelectOptionContext.Provider>
       </ShowBackModalContext.Provider>
     </>

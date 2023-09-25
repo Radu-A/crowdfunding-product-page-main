@@ -1,0 +1,33 @@
+@import '../utils/mixins.scss', '../utils/variables.scss';
+
+.thanks-modal-section {
+    display: none;
+    max-width: 600px;
+    position: absolute;
+    top: -6rem;
+    z-index: 4;
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    p {
+        text-align: center;
+        font-size: 0.95rem;
+    }
+
+    button {
+        width: 8rem;
+        font-weight: 600;
+    }
+}
+
+.thanks-modal-section-active {
+    @include flex-column;
+}
+
+@media (min-width: 700px) {
+    .thanks-modal-section {
+        top: 6rem;
+    }
+}

@@ -1,13 +1,25 @@
 import { useContext } from "react";
 import { SelectOptionContext } from "../../../../../context/selectOptionContext";
+import { ThanksModalContext } from "../../../../../context/thanksModalContext";
+import { ShowBackModalContext } from "../../../../../context/showBackModalContext";
 
 const Option1 = () => {
+  const { showBackModal } = useContext(ShowBackModalContext);
   const {
     handleChange,
     option,
     optionArticleClass,
     optionPledgeClass,
+    backModalRef,
   } = useContext(SelectOptionContext);
+  const { showThanksModal } = useContext(ThanksModalContext);
+  const handleClick = (event) => {
+    showBackModal(event);
+    showThanksModal(event);
+    backModalRef.current.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
 
   return (
     <article className={optionArticleClass.optionArticle1}>
@@ -42,7 +54,9 @@ const Option1 = () => {
             <span>$</span>
             <input type="number" min="25" max="999" />
           </div>
-          <button type="submit">Continue</button>
+          <button type="submit" onClick={handleClick}>
+            Continue
+          </button>
         </form>
       </div>
     </article>

@@ -42,6 +42,10 @@ button:hover {
     cursor: pointer;
 }
 
+button:not(.bookmark-button):hover {
+    background-color: $dark-cyan !important;
+}
+
 button:not(.bookmark-button) {
     height: 3.5rem;
     width: 12rem;

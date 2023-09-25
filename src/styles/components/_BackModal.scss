@@ -29,6 +29,10 @@
     .option-heading-div {
         @include flex-row;
         gap: 1rem;
+
+        .option-heading-1:hover {
+            color: $moderate-cyan;
+        }
     }
 
     input[type='radio']+label {
