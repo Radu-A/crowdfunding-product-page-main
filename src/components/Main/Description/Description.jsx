@@ -5,9 +5,21 @@ import BackModal from "./BackModal/BackModal";
 import { useContext } from "react";
 import { ShowBackModalContext } from "../../../context/showBackModalContext";
 import ThanksModal from "./ThanksModal/ThanksModal";
+import { ThanksModalContext } from "../../../context/thanksModalContext";
 
 const Description = () => {
   const { showBackModal, layerModalClass } = useContext(ShowBackModalContext);
+  const { showThanksModal, thanksModalClass } = useContext(ThanksModalContext);
+
+  const handleClick = (event) => {
+    if (
+      thanksModalClass === "thanks-modal-section thanks-modal-section-active"
+    ) {
+      showThanksModal(event);
+    } else {
+      showBackModal(event);
+    }
+  };
 
   return (
     <section className="description-section">
@@ -31,7 +43,7 @@ const Description = () => {
       <Option3 />
       <BackModal />
       <ThanksModal />
-      <div className={layerModalClass} onClick={showBackModal}></div>
+      <div className={layerModalClass} onClick={handleClick}></div>
     </section>
   );
 };
